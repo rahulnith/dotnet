@@ -1,0 +1,48 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Octavius - About";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="text-dark">
+        <p>
+            <div class="card">
+                <h3 class="card-header">What is a KOL ?</h3>
+                <div class="card-body">
+                    <div class="card-text">
+                        A Key Opinion Leader, or KOL, refers to a small group of people who specialize in a specific area of interest,
+                        becoming experts on certain topics. For this reason, they are also known as micro-influencers.
+                        These individuals have attained a high degree of trust expressed by a more specific audience.
+                    </div>
+                </div>
+            </div>
+
+            <br /><br />
+
+            <div class="card">
+                <h3 class="card-header">
+                    Process
+                </h3>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">We will be taking raw data as input, from various sources.</li>
+                    <li class="list-group-item">We will store them in a cloud storage (landing area).</li>
+                    <li class="list-group-item">We will process them to be used as a meaningful and interpretable dataset (staging area).</li>
+                    <li class="list-group-item">We will be showing the data from cloud to users via a website (User Interface) according to their need.</li>
+                </ul>
+            </div>
+        </p>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+</html>

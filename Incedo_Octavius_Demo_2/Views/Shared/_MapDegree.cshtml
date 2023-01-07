@@ -1,0 +1,21 @@
+﻿@{ 
+    Layout = ""; 
+}
+
+<div class="container">
+    <form action="/KOL_Image/Index" method="post">
+        <div class="row container">
+            <div class="col-md-6 d-flex align-items-center justify-content-center" style="background-color:lightcyan; padding:10px">
+                <h3>
+                    @Html.ActionLink("Existing Degree", "Index", "BusinessUserDegreeModels", routeValues: null, htmlAttributes: new { @class = "btn btn-danger btn-lg", @role = "button" })
+                </h3>
+            </div>
+            <div class="col-md-6 d-flex align-items-center justify-content-center" style="background-color:lightcyan; padding:10px">
+                <h3>
+                    @Html.ActionLink("Unmapped Degree", "Index", "BusinessUserDegreeErrorModels", routeValues: null, htmlAttributes: new { @class = "btn btn-danger btn-lg", @role = "button" })
+                </h3>
+            </div>
+        </div>
+    </form>
+    <br />
+</div>

@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3" style="background-color: #5b2583;">
+            <div class="container">
+                <!--<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Octavius</a>-->
+                <span class="navbar-brand">@Html.ActionLink("Octavius", "Index", "Home", null, new { id = "OT", style = "color:white;text-decoration:none;font-size:30px" })</span>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse  justify-content-between">
+
+                    <ul class="navbar-nav flex-grow-1 justify-content-end">
+
+                        <img src="~/Content/img/incedo.png"/>
+                        <!--
+                        <li class="nav-item">
+                            <span class="nav-link text-dark" style="color:black">@Html.ActionLink("Home", "Index", "Home", routeValues: null, htmlAttributes: new { @class = "btn btn-outline-light ", @role = "button" })</span>
+                        </li>
+                        <li class="nav-item">
+                            <span class="nav-link text-dark">@Html.ActionLink("Medical Reps", "Index", "KOL_Image", routeValues: null, htmlAttributes: new { @class = "btn btn-outline-light ", @role = "button" })</span>
+                        </li>
+                        <li class="nav-item">
+                            <span class="nav-link text-dark">@Html.ActionLink("Business User", "Index", "BusinessUserDegreeModels", routeValues: null, htmlAttributes: new { @class = "btn btn-outline-light ", @role = "button" })</span>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <span class="nav-link text-dark"> @Html.ActionLink("About", "About", "Home")</span>
+                        </li>
+                        <li class="nav-item">
+                            <span class="nav-link text-dark">@Html.ActionLink("Privacy", "Privacy", "Home")</span>
+                        </li>
+                        <li class="nav-item">
+                            <span class="nav-link text-dark">@Html.ActionLink("Team", "Team", "Home")</span>
+                        </li>
+                        <li class="nav-item">
+                            <span class="nav-link text-dark">@Html.ActionLink("KOL", "Index", "kol_table")</span>
+                        </li>
+                        <li class="nav-item">
+                            <span class="nav-link text-dark">@Html.ActionLink("Degree", "Index", "degree_master_table")</span>
+                        </li>
+                        <li class="nav-item">
+                            <span class="nav-link text-dark">@Html.ActionLink("KOL Degree Map", "Index", "kol_degree_map_table")</span>
+                        </li>
+                        <li class="nav-item">
+                            <span class="nav-link text-dark">@Html.ActionLink("KOL Degree Spec", "Index", "Kol_With_Degree")</span>
+                        </li>
+                        <li class="nav-item">
+                            <span class="nav-link text-dark">@Html.ActionLink("KOL Image", "Index", "KOL_Image")</span>
+                        </li>
+                        <li class="nav-item">
+                            <span class="nav-link text-dark">@Html.ActionLink("KOL Details", "Index", "KOL_Details")</span>
+                        </li>
+                            -->
+                    </ul>
+
+
+
+                    <!--
+                    <div class="search">
+                        <form action="#">
+                            <input type="text"
+                                   placeholder=" Search Courses"
+                                   name="search">
+                            <button>
+                                <i class="fa fa-search"
+                                   style="font-size: 18px;">
+                                </i>
+                            </button>
+                        </form>
+                    </div>
+                        -->
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container body-content4">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.ToShortTimeString() - © Copyright 2022 Incedo Inc.</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+
+
+</html>

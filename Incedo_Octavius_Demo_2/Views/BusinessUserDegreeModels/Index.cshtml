@@ -1,0 +1,68 @@
+﻿@model IPagedList<Incedo_Octavius_Demo_2.Models.BusinessUserDegreeModel>
+
+@{
+    ViewBag.Title = "BU Degree - Index";
+}
+@using PagedList.Mvc;
+@using PagedList;
+
+
+@{
+    Html.RenderPartial("_MapBU");
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <h2>Existing Degree Business Rules</h2>
+    <br />
+    <p>
+        <!--
+        <a class="btn btn-success" href="@Url.Action("Create", "BusinessUserDegreeModels")">
+            <img src="@Url.Content("~/Content/img/create.png")" style="width:20px" />
+        </a>
+            -->
+
+        @Html.ActionLink("Create New", "Create", null, htmlAttributes: new { @class = "btn btn-success ", @role = "button" })
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Degree_Map)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Degree_Master)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Degree_Map)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Degree_Master)
+                </td>
+                <td>
+                    <a class="btn btn-primary" href="@Url.Action("Edit/"+item.MapID, "BusinessUserDegreeModels")">
+                        <img src="@Url.Content("~/Content/img/edit-text.png")" style="width:20px" />
+                    </a>
+                    <a class="btn btn-danger" href="@Url.Action("Delete/"+item.MapID, "BusinessUserDegreeModels")">
+                        <img src="@Url.Content("~/Content/img/bin.png")" style="width:20px" />
+                    </a>
+                    @*@Html.ActionLink("Edit", "Edit", new { id = item.MapID }, htmlAttributes: new { @class = "btn btn-primary ", @role = "button" })
+                        @Html.ActionLink("Details", "Details", new { id=item.MapID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.MapID }, htmlAttributes: new { @class = "btn btn-danger ", @role = "button" })*@
+                </td>
+            </tr>
+        }
+
+    </table>
+    @Html.PagedListPager(Model, i => Url.Action("Index", "BusinessUserDegreeModels", new { i, search = Request.QueryString["search"] }))
+    </body>
+</html>

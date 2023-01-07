@@ -1,0 +1,139 @@
+﻿@model IEnumerable<Incedo_Octavius_Demo_2.Models.KOL_Details>
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="~/Content/bootstrap.css">
+    <title>Index</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="justify-content-between">
+        <h2 class="text-dark text-center alert-heading">
+            KOL
+        </h2>
+        <br />
+    </div>
+        @foreach (var item in Model)
+        {
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="@item.Image_Link" class="card-img-top" alt="Dummy Profile Pic" style="object-fit:cover">
+                </div>
+                <div class="col-md-8">
+                    <table class="table">
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.KolID)
+                            </th>
+                            <td>
+                                @Html.DisplayFor(ModelItem => item.KolID)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.MDMID)
+                            </th>
+                            <td>
+                                @Html.DisplayFor(ModelItem => item.MDMID)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.First_Name)
+                            </th>
+                            <td>
+                                @Html.DisplayFor(ModelItem => item.First_Name)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Last_Name)
+                            </th>
+                            <td>
+                                @Html.DisplayFor(ModelItem => item.Last_Name)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Mail)
+                            </th>
+                            <td>
+                                @Html.DisplayFor(ModelItem => item.Mail)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Address)
+                            </th>
+                            <td>
+                                @Html.DisplayFor(ModelItem => item.Address)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.City)
+                            </th>
+                            <td>
+                                @Html.DisplayFor(ModelItem => item.City)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.State)
+                            </th>
+                            <td>
+                                @Html.DisplayFor(ModelItem => item.State)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Zip)
+                            </th>
+                            <td>
+                                @Html.DisplayFor(ModelItem => item.Zip)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ProfileStatus)
+                            </th>
+                            <td>
+                                @Html.DisplayFor(ModelItem => item.ProfileStatus)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Degree)
+                            </th>
+                            <td>
+                                @Html.DisplayFor(ModelItem => item.Degree)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.SpecialityName)
+                            </th>
+                            <td>
+                                @Html.DisplayFor(ModelItem => item.SpecialityName)
+                            </td>
+                        </tr>
+                        
+                    </table>
+                </div>
+            </div>
+            <hr />
+            <br/>
+        }
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+</html>
+

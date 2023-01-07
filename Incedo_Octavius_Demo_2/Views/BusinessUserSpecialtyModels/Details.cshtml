@@ -1,0 +1,34 @@
+﻿@model Incedo_Octavius_Demo_2.Models.BusinessUserSpecialtyModel
+
+@{
+    ViewBag.Title = "BU Speciality - Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BusinessUserSpecialtyModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SpecialtyMap)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpecialtyMap)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SpecialtyMaster)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpecialtyMaster)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MapID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

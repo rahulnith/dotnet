@@ -1,0 +1,40 @@
+﻿@model Incedo_Octavius_Demo_2.Models.BusinessUserSpecialtyModel
+
+@{
+    ViewBag.Title = "BU Speciality - Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>BusinessUserSpecialtyModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SpecialtyMap)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpecialtyMap)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SpecialtyMaster)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpecialtyMaster)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

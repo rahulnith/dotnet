@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="~/Content/bootstrap.css">
+
+    <title>Index</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="row mb-2">
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+
+                    <h3>
+                        @Html.ActionLink("Degree", "Index", "BusinessUserDegreeModels", routeValues: null, htmlAttributes: new { @class = "btn btn-outline-danger btn-lg", @role = "button" })
+                    </h3>
+
+                    <div class="mb-1 text-muted"></div>
+                    <p class="card-text mb-auto text-dark">The degrees of the business users are available here. The Degree Map along with degree master is present.You can edit and delete the respective degrees.</p>
+
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <img class="bd-placeholder-img" width="200" height="250" src="~/Content/img/degree.jpg" alt="">
+
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <!--
+                    <h3 class="mb-0">Business User</h3>
+                    -->
+                    <h2>
+                        @Html.ActionLink("Speciality", "Index", "BusinessUserSpecialtyModels", routeValues: null, htmlAttributes: new { @class = "btn btn-outline-danger btn-lg", @role = "button" })
+                    </h2>
+                    <!--
+                    <span class="nav-link text-dark">@Html.ActionLink("Business User", "Index", "BusinessUserHome")</span>
+                    -->
+                    <div class="mb-1 text-muted"></div>
+                    <p class="mb-auto text-dark">The speciality in the respective fields of the Users are available here.The speciality master along with Speciality Map is also present.</p>
+
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <img class="bd-placeholder-img" width="200" height="250" src="~/Content/img/pic1.jpg" alt="">
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

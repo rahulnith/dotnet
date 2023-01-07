@@ -1,0 +1,111 @@
+﻿@{
+    //Layout = null;
+    ViewData["Title"] = "Octavius - Index";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" href="~/Content/site.css" />
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+
+<body>
+    <section style="background-color: #fff;">
+        <div class="container py-5">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class= col-xl-4  justify-content-center">
+                    <div class="card rounded-3 text-black   shadow-lg p-3 mb-5 bg-white rounded">
+                        <div class="justify-content-center align-items-center">
+
+                            <div class="d-flex align-items-center justify-content-center">
+                                <img src="~/Content/img/octavius-logo.jpg"
+                                     style="width: 100px;" alt="logo">
+                            </div>
+
+                            @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+                            {
+
+                                <div class="form-outline mb-4">
+                                    <br />
+                                    <br />
+                                    <label class="form-label" for="form2Example11">Username</label>
+                                    <input name="username" type="text" id="form2Example11" class="form-control" required />
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form2Example22">Password</label>
+                                    <input name="password" type="password" id="form2Example22" class="form-control" required />
+                                </div>
+
+
+                                <div class="text-center pt-1 mb-2 pb-1">
+                                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">
+                                        Log
+                                        in
+                                    </button>
+                                </div>
+
+                                @ViewBag.ta_id
+                                @ViewBag.user_type
+                            }
+
+                        </div>
+                        <!--
+
+                    <div class="row g-0">
+
+            <div class="col-lg-6 d-flex align-content-end">
+                <div class="card-body p-md-5 mx-md-4">
+
+                    <div class="text-center">
+                        <img src="~/Content/img/octavius-logo.jpg"
+                             style="width: 300px;" alt="logo">
+                    </div>
+
+                    @*<form action="Home/Index" method="post">*@
+
+                    @*</form>*@
+
+                </div>
+            </div>
+                -->
+                        <!--
+            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                <div class="text-black px-3 py-4 p-md-5 mx-md-4">
+                    <h4 class="mb-4">KOL Data Standardization</h4>
+                    <ul>
+                        <li>
+                            <div class="card-body">
+                                <div class="card-text">
+                                    Discovering a sustainable data standardization process that can effectively gather and map healthcare professionals’ data from various sources.
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card-body">
+                                <div class="card-text">
+                                    Development of an intuitive report engine with a central repository that can effectively profile KOLs and capture meaningful insights for end-users.
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+                -->
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+</html>
+

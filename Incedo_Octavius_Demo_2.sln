@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32602.291
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Incedo_Octavius_Demo_2", "Incedo_Octavius_Demo_2\Incedo_Octavius_Demo_2.csproj", "{0FAD272E-A9C3-467B-817C-8BBD1FEB9E73}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FAD272E-A9C3-467B-817C-8BBD1FEB9E73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FAD272E-A9C3-467B-817C-8BBD1FEB9E73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FAD272E-A9C3-467B-817C-8BBD1FEB9E73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FAD272E-A9C3-467B-817C-8BBD1FEB9E73}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {36E68672-0C02-4E9F-86D1-DE975DD87C84}
+	EndGlobalSection
+EndGlobal

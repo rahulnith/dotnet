@@ -1,0 +1,34 @@
+﻿@model Incedo_Octavius_Demo_2.Models.BusinessUserDegreeModel
+
+@{
+    ViewBag.Title = "BU Degree - Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BusinessUserDegreeModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Degree_Map)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Degree_Map)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Degree_Master)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Degree_Master)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MapID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

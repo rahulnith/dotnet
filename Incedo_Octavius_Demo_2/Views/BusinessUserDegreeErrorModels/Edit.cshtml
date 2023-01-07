@@ -1,0 +1,49 @@
+﻿@model Incedo_Octavius_Demo_2.Models.BusinessUserDegreeErrorModel
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <h4>BusinessUserDegreeErrorModel</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.mdm_id)
+
+    <div class="form-group">
+        @Html.Label("Unmapped Degree", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.degree, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+            @Html.ValidationMessageFor(model => model.degree, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @*@Html.LabelFor(model => model.degree, htmlAttributes: new { @class = "control-label col-md-2" })*@
+        @Html.LabelFor(model => model.degree, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @*@Html.EditorFor(model => model.Degree_Master, new { htmlAttributes = new { @class = "form-control" } })*@
+
+
+            @Html.DropDownList("degree_id", ViewBag.DegreeListItem as SelectList, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.degree, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <br />
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-primary" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

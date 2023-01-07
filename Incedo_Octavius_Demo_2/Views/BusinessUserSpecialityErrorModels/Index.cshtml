@@ -1,0 +1,60 @@
+﻿@model IPagedList<Incedo_Octavius_Demo_2.Models.BusinessUserSpecialityErrorModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@using PagedList.Mvc;
+@using PagedList;
+
+
+
+@{
+    Html.RenderPartial("_MapBU");
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <h2>Unmapped Speciality Business Rules</h2>
+    @*
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+    *@
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.First().speciality)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.speciality)
+                </td>
+                <td>
+                    <a class="btn btn-primary" href="@Url.Action("Edit/"+item.mdm_id, "BusinessUserSpecialityErrorModels")">
+                        <img src="@Url.Content("~/Content/img/edit-text.png")" style="width:20px" />
+                    </a>
+                    @*
+                                @Html.ActionLink("Edit", "Edit", new { id = item.mdm_id }, htmlAttributes: new { @class = "btn btn-primary ", @role = "button" })
+                                @*
+                        @Html.ActionLink("Details", "Details", new { id = item.mdm_id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.mdm_id })
+                    *@
+                </td>
+            </tr>
+        }
+
+    </table>
+    @Html.PagedListPager(Model, i => Url.Action("Index", "BusinessUserSpecialityErrorModels", new { i, search = Request.QueryString["search"] }))
+    </body>
+</html>

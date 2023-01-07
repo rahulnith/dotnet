@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Incedo_Octavius_Demo_2.Models.ProfileStatusModel>
+@{ 
+    Layout = "";
+    int profile=0;
+}
+<div class="container">
+    <form action="/KOL_Image/Index" method="post">
+        <div class="row container">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4 d-flex align-items-center justify-content-center" style="background-color: lightblue; padding: 10px">
+                    <button name="profile" type="submit" class="btn btn-danger" value=@item.ProfileStatusID>@Html.DisplayFor(modelItem => item.ProfileStatus)</button>
+                    @*@Html.ActionLink(item.ProfileStatus, "Index", "KOL_Image", routeValues: null, htmlAttributes: new { @class = "btn btn-outline-info btn-lg", @role = "button", @name="profile" })*@
+                    @{ 
+                        profile = item.ProfileStatusID;
+                    }
+                </div>
+
+            }
+            @foreach (var item in ViewBag.KOLCount)
+            {
+                <div class="col-md-4 d-flex align-items-center justify-content-center" style="background-color: lightblue; padding: 10px">
+                    <span>@item</span>
+                </div>
+            }
+        </div>
+    </form>
+    <br/>
+    <div>
+        @* Html.BeginForm is used to add a form in an Html document *@
+        @* Pass the action name in the first parameter, controller name in the second parameter and specify the form request type as get *@
+        @{
+            using (Html.BeginForm("Search", "KOL_Image", FormMethod.Post))
+            {
+                <b> Search </b>
+                <text>Name : </text>
+                <input type="hidden" value="1" name="id" />
+                @*@Html.TextBox("search");*@
+                <input type="text" name="search" id="search" required />
+                <input class="btn btn-info" type="submit" name="submit" value="Search" />
+            }
+        }
+    </div>
+    <br />
+</div>

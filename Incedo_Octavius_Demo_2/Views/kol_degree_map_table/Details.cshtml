@@ -1,0 +1,34 @@
+﻿@model Incedo_Octavius_Demo_2.Models.kol_degree_map_table
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>kol_degree_map_table</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.KOLID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KOLID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DegreeID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DegreeID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
